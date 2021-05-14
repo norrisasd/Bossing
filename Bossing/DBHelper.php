@@ -1,13 +1,13 @@
 <?php
-    $host="localhost";
-    $user="root";
-    $pass="";
-    $data="fooddeliverysystem";
+//     $host="localhost";
+//     $user="root";
+//     $pass="";
+//     $data="fooddeliverysystem";
     // HOSTING
-    // $host="Xn15Dg4HjH";
-    // $user="remotemysql.com";
-    // $pass="0lBbv6IvK4";
-    // $data="Xn15Dg4HjH";
+    $host="Xn15Dg4HjH";
+    $user="remotemysql.com";
+    $pass="0lBbv6IvK4";
+    $data="Xn15Dg4HjH";
     $db = mysqli_connect($host,$user,$pass,$data);
         //local
     if (!$db) {
