@@ -4,8 +4,8 @@
 //     $pass="";
 //     $data="fooddeliverysystem";
     // HOSTING
-    $host="Xn15Dg4HjH";
-    $user="remotemysql.com";
+    $user="Xn15Dg4HjH";
+    $host="remotemysql.com";
     $pass="0lBbv6IvK4";
     $data="Xn15Dg4HjH";
     $db = mysqli_connect($host,$user,$pass,$data);
