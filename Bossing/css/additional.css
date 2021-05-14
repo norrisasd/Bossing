@@ -1,0 +1,23 @@
+#headTitle{
+    color:white;
+    font-size:32px;
+    margin-left:1rem;
+}
+.inLineTitle{
+    display:flex;
+    margin:0;
+    padding:0;
+}
+.inLineTitle img{
+    margin-right:0.5rem;
+}
+.Login{
+    margin:0;
+    align-self: center;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
