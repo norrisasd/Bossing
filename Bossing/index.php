@@ -88,7 +88,7 @@
                             <?php 
                             if(!isset($_SESSION['login'])){
                             ?>
-                                <li class="button_user"><a class="button" href="Login.php">Login</a><a class="button active" href="#">Register</a></li>
+                                <li class="button_user"><a class="button" href="Login.php">Login</a><a class="button" href="#">Register</a></li>
                             <?php
                             }else{
                             ?>
