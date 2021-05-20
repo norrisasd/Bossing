@@ -16,6 +16,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="images/icon.png">
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+    </style>
     <link rel="stylesheet" href="css/additional.css">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">

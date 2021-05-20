@@ -51,7 +51,6 @@
                 </div>
 
                 <ul class="list-unstyled components">
-
                     <li >
                         <a href="index.php">Home</a>
                     </li>
@@ -118,18 +117,17 @@
           <input type="checkbox" class="form-check-input" value="IsRememberMe" id="rememberMe">
           <label class="form-check-label" for="rememberMe">Remember Me</label>
         </div>
-        <button type="submit" class="btn btn-primary" name="Submit" style="margin-top: 1rem;background-color:#212020; border:none" onclick="IsRememberMe()">Submit</button>
+        <button type="submit" class="btn btn-primary" name="Submit" style="margin-top: 1rem;background-color:#212020; border:none" onclick="IsRememberMe()">Login</button>
         <?php
         if($_SESSION['check']){
         ?>
         <div style="border:1px solid red;margin-top:20px;text-align:center;background-color:#fec1c1" >
-        <h3 style="margin-top:5px"><b>Invalid Credentials</b></h3>
+            <h3 style="margin-top:5px"><b>Invalid Credentials</b></h3>
         </div>
         <?php
         }
         ?>
       </form>
-     
 </div>
 <!-- end content -->
     <!-- footer -->
@@ -180,9 +178,8 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/additional.js"></script>
-     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    
-     <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
    <script type="text/javascript">
    //AVOID RESUBMISSION FORM
         if ( window.history.replaceState ) {

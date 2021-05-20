@@ -5,6 +5,7 @@
     <!-- basic -->
     <meta charset="utf-8">
     <?php include 'DBHelper.php';?>
+    <?php include 'functions.php';?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="images/icon.png">
     <!-- mobile metas -->
@@ -58,7 +59,7 @@
                         <a href="about.php">About</a>
                     </li>
                     <li>
-                        <a href="recipe.php">Recipe</a>
+                        <a href="recipe.php">Menu</a>
                     </li>
                     <li>
                         <a href="blog.php">Blog</a>
@@ -91,12 +92,7 @@
                                 <li class="button_user"><a class="button" href="Login.php">Login</a><a class="button" href="#">Register</a></li>
                             <?php
                             }else{
-                            ?>
-                                <li class="button_user"><a class="button" style="border:none;" href="#">MyOrder</a></li>
-                                <li class="button_user"><a class="button" style="border:none;" href="#">My Bag</a></li>
-                                <li class="button_user"><a class="button" style="border:none;" href="#">Profile</a></li>
-                                <li class="button_user"><a class="button" style="border:none;" href="Logout.php">Logout</a></li>
-                            <?php
+                                printMenu();
                             }
                             ?>
                                 <li>
@@ -195,92 +191,92 @@
 
                 <div class="item">
                     <div class="product_blog_img">
-                        <img src="images/rs1.png" alt="#" />
+                        <img src="PHP PIC/chicken.png" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>Homemade</h3>
-                        <h4><span class="theme_color">$</span>10</h4>
+                        <h3>Fried Chicken</h3>
+                        <h4><span class="theme_color">Php</span>20</h4>
                     </div>
                 </div>
                 <div class="item">
                     <div class="product_blog_img">
-                        <img src="images/rs2.png" alt="#" />
+                        <img src="PHP PIC/chop.png" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>Noodles</h3>
-                        <h4><span class="theme_color">$</span>20</h4>
+                        <h3>Chopsuey</h3>
+                        <h4><span class="theme_color">Php</span>20</h4>
                     </div>
                 </div>
                 <div class="item">
                     <div class="product_blog_img">
-                        <img src="images/rs3.png" alt="#" />
+                        <img src="PHP PIC/lum.png" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>Egg</h3>
-                        <h4><span class="theme_color">$</span>30</h4>
+                        <h3>Lumpia</h3>
+                        <h4><span class="theme_color">Php</span>20</h4>
                     </div>
                 </div>
                 <div class="item">
                     <div class="product_blog_img">
-                        <img src="images/rs4.png" alt="#" />
+                        <img src="PHP PIC/pancit.png" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>Sushi Dizzy</h3>
-                        <h4><span class="theme_color">$</span>40</h4>
+                        <h3>Pancit</h3>
+                        <h4><span class="theme_color">Php</span>30</h4>
                     </div>
                 </div>
                 <div class="item">
                     <div class="product_blog_img">
-                        <img src="images/rs5.png" alt="#" />
+                        <img src="PHP PIC/steam.png" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>The Coffee Break</h3>
-                        <h4><span class="theme_color">$</span>50</h4>
+                        <h3>Steamed Rice</h3>
+                        <h4><span class="theme_color">Php</span>20</h4>
                     </div>
                 </div>
                 <div class="item">
                     <div class="product_blog_img">
-                        <img src="images/rs1.png" alt="#" />
+                        <img src="PHP PIC/bul.png" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>Homemade</h3>
-                        <h4><span class="theme_color">$</span>10</h4>
+                        <h3>Bulalo</h3>
+                        <h4><span class="theme_color">Php</span>40</h4>
                     </div>
                 </div>
                 <div class="item">
                     <div class="product_blog_img">
-                        <img src="images/rs2.png" alt="#" />
+                        <img src="PHP PIC/sin.png" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>Noodles</h3>
-                        <h4><span class="theme_color">$</span>20</h4>
+                        <h3>Sinigang</h3>
+                        <h4><span class="theme_color">Php</span>20</h4>
                     </div>
                 </div>
                 <div class="item">
                     <div class="product_blog_img">
-                        <img src="images/rs3.png" alt="#" />
+                        <img src="PHP PIC/siom.png" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>Egg</h3>
-                        <h4><span class="theme_color">$</span>30</h4>
+                        <h3>Siomai</h3>
+                        <h4><span class="theme_color">Php</span>8</h4>
                     </div>
                 </div>
                 <div class="item">
                     <div class="product_blog_img">
-                        <img src="images/rs4.png" alt="#" />
+                        <img src="PHP PIC/fries.png" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>Sushi Dizzy</h3>
-                        <h4><span class="theme_color">$</span>40</h4>
+                        <h3>French Fries</h3>
+                        <h4><span class="theme_color">Php</span>10</h4>
                     </div>
                 </div>
                 <div class="item">
                     <div class="product_blog_img">
-                        <img src="images/rs5.png" alt="#" />
+                        <img src="PHP PIC/orange.png" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>The Coffee Break</h3>
-                        <h4><span class="theme_color">$</span>50</h4>
+                        <h3>Juice</h3>
+                        <h4><span class="theme_color">Php</span>10</h4>
                     </div>
                 </div>
 
@@ -311,7 +307,7 @@
              <div class="about_box">
                  <h3>Best Food</h3>
                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscureContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard </p>
-                 <a href="#">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                 <a href="about.php">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
              </div>
          </div>
           <div class="col-xl-5 col-lg-5 col-md-10 col-sm-12 about_img_boxpdnt">

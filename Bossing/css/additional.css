@@ -1,3 +1,4 @@
+
 #headTitle{
     color:white;
     font-size:32px;
@@ -16,8 +17,137 @@
     align-self: center;
 
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.rowItem img{
+    width:300px;
+    height:300px;
+}
+.rowItem{
+    display:block;
+    margin:2.5rem 5rem 2.5rem 5rem; 
+    text-align: center;
+
+}
+.rowItem button{
+    margin-top:1rem;
+}
+.rowItem input{
+    margin:0px;
+    padding:0px;
+    width:45px;
+    height:25px;
+    font-size:15px;
+    text-align:center;
+}
+.rowItem span{
+    font-size:25px;
+    color:black;
+}
+.bagItem{
+    display:inline-flex;
+    margin:0;
+    padding:1rem;
+    border-bottom:3px solid black;
+}
+.bagItem img{
+    width:100px;
+    height:100px;
+}
+.bagItemRight{
+    text-align: center;
+    margin-left:1rem;
+    margin-top:3rem;
+}
+.bagItemRight span{
+    font-size:20px;
+    color:#212020;
+}
+.bagItemRight input{
+    margin:0px;
+    padding:0px;
+    width:45px;
+    height:25px;
+    font-size:15px;
+    text-align:center;
+}
+.iconPlace{
+    margin-left:1.5rem;
+    margin-top:1.25rem;
+}
+#iconAtt{
+    font-size:40px;
+    margin-left:0.5rem;
+    color:black;
+}
+.table{
+    margin-left:auto;
+    margin-right:auto;
+    width:1000px;
+    color:#212020;
+    font-size:15px;
+}
+.table tr{
+    text-align: center;
+}
+.table td i{
+    margin-left:1rem;
+    padding:0.25rem;
+    font-size:20px;
+    border-radius: 3px;
+}
+.table td i:hover{
+    color:white;
+    background-color: #212020;
+    transition: background-color 0.2s;
+    transition-timing-function: ease-in;
+}
+#editModal{
+    text-align: center;
+}
+#imgSize{
+    width:200px;
+    height:200px;
+
+}
+.modalSpan{
+    font-size:25px;
+    color:black;
+    margin-top:0;
+    margin-bottom:0.5rem;
+}
+#modalInput{
+    margin:0px;
+    padding:0px;
+    width:45px;
+    height:25px;
+    font-size:15px;
+    text-align:center;
+}
+#contact::-webkit-outer-spin-button,
+#contact::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.profileSide{
+    margin:0;
+
+}
+.tableProf th{
+    text-align:right;
+    margin-left:10rem;
+}
+.tableProf td{
+    margin-right:0;
+    margin-left:auto;
+    text-align:left;
+}
+.tableProf{
+    border:none;
+}
+.ahover a{
+    color:white;
+    
+}
+.ahover a:hover{
+    color:#d8b00f;
+    /* transition:color 0.2s; */
 }

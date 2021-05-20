@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <!-- PHP FILES -->
     <?php include 'DBHelper.php';?>
+    <?php include 'functions.php';?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,7 +60,7 @@
                         <a href="about.php">About</a>
                     </li>
                     <li>
-                        <a href="recipe.php">Recipe</a>
+                        <a href="recipe.php">Menu</a>
                     </li>
                     <li class="active">
                         <a href="blog.php">Blog</a>
@@ -89,15 +90,10 @@
                             <?php 
                             if(!isset($_SESSION['login'])){
                             ?>
-                                <li class="button_user"><a class="button" href="Login.php">Login</a><a class="button active" href="#">Register</a></li>
+                                <li class="button_user"><a class="button" href="Login.php">Login</a><a class="button" href="#">Register</a></li>
                             <?php
                             }else{
-                            ?>
-                                <li class="button_user"><a class="button" style="border:none;" href="#">MyOrder</a></li>
-                                <li class="button_user"><a class="button" style="border:none;" href="#">My Bag</a></li>
-                                <li class="button_user"><a class="button" style="border:none;" href="#">Profile</a></li>
-                                <li class="button_user"><a class="button" style="border:none;" href="Logout.php">Logout</a></li>
-                            <?php
+                                printMenu();
                             }
                             ?>
                                 <li>
