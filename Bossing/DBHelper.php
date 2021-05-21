@@ -173,6 +173,7 @@
         echo'<tr height="200px" style="line-height:200px">
                 <td COLSPAN="5" style="font-size:35px; text-align:center;">BAG IS EMPTY</td>
             </tr>';
+            echo '<script>alert("'.mysqli_error($db).'");</alert>';//
         return false;
         }
         return true;
