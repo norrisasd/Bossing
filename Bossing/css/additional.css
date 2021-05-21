@@ -1,4 +1,26 @@
-
+::-webkit-scrollbar{
+    width:0.25rem;
+  }
+  ::-webkit-scrollbar-thumb{
+    background:#232323;
+      opacity:0.5;
+  }
+  ::-webkit-scrollbar-track{
+    background:#d8d3d3;
+  }
+  body::-webkit-scrollbar{
+      width:0.25rem;
+  }
+  body::-webkit-scrollbar-thumb{
+      background:#232323;
+      opacity:0.5;
+  }
+  body::-webkit-scrollbar-track{
+      background:#d8d3d3;
+  }
+body{
+    overflow-x: hidden;
+}
 #headTitle{
     color:white;
     font-size:32px;
@@ -129,6 +151,7 @@
 }
 .profileSide{
     margin:0;
+    padding:0;
 
 }
 .tableProf th{
@@ -150,4 +173,39 @@
 .ahover a:hover{
     color:#d8b00f;
     /* transition:color 0.2s; */
+}
+.pendel{
+    display:inline-flex;
+    height:40px;
+}
+.pendel a{
+    color:black;
+    font-size:20px;
+}
+.pendel a:hover, a:focus{
+    color:#d8b00f;
+    border-bottom: solid 1px #212020;
+    transition: border 0.4s;
+}
+.activeee{
+    color:#d8b00f !important;
+    border-bottom: solid 1px #212020;
+    transition: border 0.4s;
+}
+.dashInnerBox{
+    height:200px;
+    width:200px;
+    border:inset 3px #212020;
+    box-shadow: inset 1px 1px 5px black;
+    border-radius:10px;
+    margin:1rem auto;
+    text-align: center;
+}
+.dashInnerBox h1{
+    margin-top:1rem;
+    font-weight:500;
+
+}
+.dashInnerBox span{
+    font-size:60px;
 }

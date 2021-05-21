@@ -44,35 +44,7 @@
     <div class="wrapper">
     <!-- end loader -->
 
-     <div class="sidebar">
-            <!-- Sidebar  -->
-            <nav id="sidebar">
-
-                <div id="dismiss">
-                    <i class="fa fa-arrow-left"></i>
-                </div>
-
-                <ul class="list-unstyled components">
-
-                    <li >
-                        <a href="../index.php">Home</a>
-                    </li>
-                    <li>
-                        <a href="../about.php">About</a>
-                    </li>
-                    <li>
-                        <a href="../recipe.php">Recipe</a>
-                    </li>
-                    <li>
-                        <a href="../blog.php">Blog</a>
-                    </li>
-                    <li>
-                        <a href="../contact.php">Contact Us</a>
-                    </li>
-                </ul>
-
-            </nav>
-        </div>
+     
 
     <div id="content">
     <!-- header -->
@@ -89,16 +61,13 @@
                         <div class="right_header_info">
                             <ul>
                                 <?php
-                                echo'<li class="button_user"><a class="button active" style="border:none;" href="#">Order</a></li>
-                                <li class="button_user"><a class="button" style="border:none;" href="mybag.php">My Bag</a></li>
-                                <li class="button_user"><a class="button" style="border:none;" href="profile.php">Profile</a></li>
+                                echo'<li class="button_user"><a class="button" style="border:none;" href="dashboard.php">Dashboard</a></li>
+                                <li class="button_user"><a class="button active" style="border:none;" href="#">Users</a></li>
+                                <li class="button_user"><a class="button" style="border:none;" href="orders.php">Orders</a></li>
+                                <li class="button_user"><a class="button" style="border:none;" href="products.php">Products & Carriers</a></li>
+                                <li class="button_user"><a class="button" style="border:none;" href="delivery.php">Delivery</a></li>
                                 <li class="button_user"><a class="button" style="border:none;" href="../Logout.php">Logout</a></li>';
                                 ?>
-                                <li>
-                                    <button type="button" id="sidebarCollapse">
-                                        <img src="../images/menu_icon.png" alt="#">
-                                    </button>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -109,36 +78,46 @@
     <!-- end header -->
 <!-- content -->
 <div class ="d-block justify-content-center" style="padding-top: 10rem;background-image: url('../images/bg.jpg');">
-    <?php
-        if($_SESSION['check']){
-    ?>
-        <div class="alert alert-success" style="text-align:center;font-size:25px"role="alert">
-            Added to Bag
-        </div>
-    <?php
-        }
-    ?>
     <div class="title" style="padding-bottom:0">
-        <h2>Order</h2>
+        <h2>Users</h2>
     </div>
-        <?php
-            displayProducts($db);
-        ?>
-    <form method="post">
-        <input type="number" name="prodID" id="prodID" style="display:none">
-        <input type="number" name="quantity" id="quantity" style="display:none">
-        <button type="submit" name="addToBag" id="addBag" style="display:none"></button>
-    </form>
-    <script>
-        function setProdQuant(prodID,prodName){
-        var pID = document.getElementById("prodID").value=prodID;
-        var prodQ = document.getElementById(prodName).value;//
-        document.getElementById("quantity").value=prodQ;
-        document.getElementById("addBag").click();
-        }
-    </script>
+    <br>
+    <div class="d-block justify-content-center">
+    <table class="table" style="margin-left:auto;margin-right:auto;width:auto;">
+        <thead>
+            <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Password</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Order Count</th>
+            <th scope="col">Admin</th>
+            <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                displayAllUsers($db);
+            ?>
+        </tbody>
+    </table>
+    <br>
 </div>
 <!-- end content -->
+<form method="post">
+    <button type="submit" name="admin" id="admin" style="display:none"></button>
+</form>
+<script>
+    function makeAdmin(user){
+        if(confirm("are you sure you want to make ("+user+") an admin?")){
+            document.getElementById("admin").value=user;
+            document.getElementById("admin").click();
+        }
+        
+    }
+</script>
+<!-- PLACE ORDER -->
     <!-- footer -->
     <fooetr>
         <div class="footer">

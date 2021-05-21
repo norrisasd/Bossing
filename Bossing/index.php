@@ -189,96 +189,7 @@
         <div class="col-md-12">
             <div class="owl-carousel owl-theme">
 
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="PHP PIC/chicken.png" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Fried Chicken</h3>
-                        <h4><span class="theme_color">Php</span>20</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="PHP PIC/chop.png" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Chopsuey</h3>
-                        <h4><span class="theme_color">Php</span>20</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="PHP PIC/lum.png" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Lumpia</h3>
-                        <h4><span class="theme_color">Php</span>20</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="PHP PIC/pancit.png" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Pancit</h3>
-                        <h4><span class="theme_color">Php</span>30</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="PHP PIC/steam.png" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Steamed Rice</h3>
-                        <h4><span class="theme_color">Php</span>20</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="PHP PIC/bul.png" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Bulalo</h3>
-                        <h4><span class="theme_color">Php</span>40</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="PHP PIC/sin.png" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Sinigang</h3>
-                        <h4><span class="theme_color">Php</span>20</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="PHP PIC/siom.png" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Siomai</h3>
-                        <h4><span class="theme_color">Php</span>8</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="PHP PIC/fries.png" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>French Fries</h3>
-                        <h4><span class="theme_color">Php</span>10</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="PHP PIC/orange.png" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Juice</h3>
-                        <h4><span class="theme_color">Php</span>10</h4>
-                    </div>
-                </div>
+                <?php displayProductSlider($db);?>
 
             </div>
         </div>
@@ -305,14 +216,14 @@
        <div class="row">
          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
              <div class="about_box">
-                 <h3>Best Food</h3>
-                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscureContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard </p>
+                 <h3>Restaurant and Delivery Services</h3>
+                 <p>Our restaurant opens daily from 7:30 AM – 8:30 PM. At that time, customers can visit us at N. Bacalso Avenue, Cebu City, or log on to bossingsrestaurant.com.ph to get their Bossing’s favorites online. We are also partnered with the top food delivery carriers such as GrabFood and Foodpanda. </p>
                  <a href="about.php">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
              </div>
          </div>
           <div class="col-xl-5 col-lg-5 col-md-10 col-sm-12 about_img_boxpdnt">
              <div class="about_img">
-                 <figure><img src="images/about-img.jpg" alt="#/"></figure>
+                 <figure><img src="PHP PIC/pic2.jpg" alt="#/"></figure>
              </div>
          </div>      
        </div> 
@@ -327,8 +238,8 @@
       <div class="col-md-12">
         <div class="title">
           <i><img src="images/title.png" alt="#"/></i>
-          <h2>Our Blog</h2>
-          <span>when looking at its layout. The point of using Lorem</span>
+          <h2>Our Products and Services</h2>
+          <span>Get to Know Our Food Better!</span>
         </div>
       </div>
     </div>
@@ -336,34 +247,34 @@
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mar_bottom">
         <div class="blog_box">
           <div class="blog_img_box">
-            <figure><img src="images/blog_img1.png" alt="#"/>
-             <span>02 FEB 2019</span>
+            <figure><img src="PHP PIC/Fried Chicken.png" alt="#"/>
+             <span>16 OCT 2020</span>
             </figure>
           </div>
-          <h3>Spicy Barger</h3>
-          <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the </p>
+          <h3>Fried Chicken</h3>
+          <p>Our fried chicken is the bestselling food in our restaurant. Because it gives you the crispiest chicken in town. The smoothness of the meat of the chicken is very soothing and the food taste like an imported chicken. </p>
         </div>
       </div>
        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mar_bottom">
         <div class="blog_box">
           <div class="blog_img_box">
-            <figure><img src="images/blog_img2.png" alt="#"/>
-             <span>02 FEB 2019</span>
+            <figure><img src="PHP PIC/Beef Bulalo.png" alt="#"/>
+             <span>22 NOV 2020</span>
             </figure>
           </div>
-          <h3>Egg & Tosh</h3>
-          <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the </p>
+          <h3>Beef Bulalo</h3>
+          <p>Our bulalo is the best in town. Because it is 100% beef, and it gives you a calmness when you taste the soup of our bulalo. The bulalo has a marrow in it which makes the dish vey likeable.  </p>
         </div>
       </div>
        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
         <div class="blog_box">
           <div class="blog_img_box">
-            <figure><img src="images/blog_img3.png" alt="#"/>
-             <span>02 FEB 2019</span>
+            <figure><img src="PHP PIC/Lumpia Shanghai.png" alt="#"/>
+             <span>05 APR 2021</span>
             </figure>
           </div>
-          <h3>Pizza</h3>
-          <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the </p>
+          <h3>Lumpia Shanghai</h3>
+          <p>Our lumpia is the crispiest lumpia in town. Because it is cooked well, and it is well-wrapped. The wrappings have been measured well and our lumpia is very healthy because aside of pork it has a vegetable inside in it. The cheese and pork inside the lumpia mix well because we measure it correctly.  </p>
         </div>
       </div>
     </div>

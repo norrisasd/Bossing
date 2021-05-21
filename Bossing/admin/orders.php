@@ -44,35 +44,7 @@
     <div class="wrapper">
     <!-- end loader -->
 
-     <div class="sidebar">
-            <!-- Sidebar  -->
-            <nav id="sidebar">
-
-                <div id="dismiss">
-                    <i class="fa fa-arrow-left"></i>
-                </div>
-
-                <ul class="list-unstyled components">
-
-                    <li >
-                        <a href="../index.php">Home</a>
-                    </li>
-                    <li>
-                        <a href="../about.php">About</a>
-                    </li>
-                    <li>
-                        <a href="../recipe.php">Recipe</a>
-                    </li>
-                    <li>
-                        <a href="../blog.php">Blog</a>
-                    </li>
-                    <li>
-                        <a href="../contact.php">Contact Us</a>
-                    </li>
-                </ul>
-
-            </nav>
-        </div>
+     
 
     <div id="content">
     <!-- header -->
@@ -89,16 +61,13 @@
                         <div class="right_header_info">
                             <ul>
                                 <?php
-                                echo'<li class="button_user"><a class="button active" style="border:none;" href="#">Order</a></li>
-                                <li class="button_user"><a class="button" style="border:none;" href="mybag.php">My Bag</a></li>
-                                <li class="button_user"><a class="button" style="border:none;" href="profile.php">Profile</a></li>
+                                echo'<li class="button_user"><a class="button" style="border:none;" href="dashboard.php">Dashboard</a></li>
+                                <li class="button_user"><a class="button" style="border:none;" href="users.php">Users</a></li>
+                                <li class="button_user"><a class="button active" style="border:none;" href="#">Orders</a></li>
+                                <li class="button_user"><a class="button" style="border:none;" href="products.php">Products & Carriers</a></li>
+                                <li class="button_user"><a class="button" style="border:none;" href="delivery.php">Delivery</a></li>
                                 <li class="button_user"><a class="button" style="border:none;" href="../Logout.php">Logout</a></li>';
                                 ?>
-                                <li>
-                                    <button type="button" id="sidebarCollapse">
-                                        <img src="../images/menu_icon.png" alt="#">
-                                    </button>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -109,36 +78,55 @@
     <!-- end header -->
 <!-- content -->
 <div class ="d-block justify-content-center" style="padding-top: 10rem;background-image: url('../images/bg.jpg');">
-    <?php
-        if($_SESSION['check']){
-    ?>
-        <div class="alert alert-success" style="text-align:center;font-size:25px"role="alert">
-            Added to Bag
-        </div>
-    <?php
-        }
-    ?>
     <div class="title" style="padding-bottom:0">
-        <h2>Order</h2>
+        <h2>Orders</h2>
     </div>
-        <?php
-            displayProducts($db);
-        ?>
-    <form method="post">
-        <input type="number" name="prodID" id="prodID" style="display:none">
-        <input type="number" name="quantity" id="quantity" style="display:none">
-        <button type="submit" name="addToBag" id="addBag" style="display:none"></button>
-    </form>
-    <script>
-        function setProdQuant(prodID,prodName){
-        var pID = document.getElementById("prodID").value=prodID;
-        var prodQ = document.getElementById(prodName).value;//
-        document.getElementById("quantity").value=prodQ;
-        document.getElementById("addBag").click();
-        }
-    </script>
+    <br>
+    <div class="d-block justify-content-center">
+    <table class="table" style="margin-left:auto;margin-right:auto;width:800px;">
+        <thead>
+            <tr>
+            <th scope="col">Order_ID</th>
+            <th scope="col">Date_Ordered</th>
+            <th scope="col">Total_Price</th>
+            <th scope="col">Username</th>
+            <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                displayAllOrders($db);
+            ?>
+        </tbody>
+    </table>
+    <br>
 </div>
 <!-- end content -->
+<!-- modal -->
+<div class="modal fade" id="details" tabindex="-1" aria-labelledby="editModal"  style="text-align:center" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="margin: 0 auto;padding:0;">
+        <div class="title" style="padding-bottom:0;text-align:center">
+            <h2>ORDERS</h2>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody" style="margin: 0 auto;border:none;">
+      </div>
+      <div class="modal-footer" style="margin: 0 auto;border:none;">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- PLACE ORDER -->
+    <script>
+        function details(prod){
+            document.getElementById("modalBody").innerHTML=prod;
+            // document.getElementById("getOrder").click(); kuwang
+        }
+    </script>
+
     <!-- footer -->
     <fooetr>
         <div class="footer">

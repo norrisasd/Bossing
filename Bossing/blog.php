@@ -115,7 +115,6 @@
                <div class="col-md-12">
                   <div class="title">
                      <h2>Our Blog</h2>
-                    
                   </div>
                </div>
             </div>
@@ -128,8 +127,8 @@
       <div class="col-md-12">
         <div class="title">
           <i><img src="images/title.png" alt="#"/></i>
-          
-          <span>when looking at its layout. The point of using Lorem</span>
+          <h2>Our Tastiest Food</h2>
+          <span>Get to Know Our Food Better!</span>
         </div>
       </div>
     </div>
@@ -137,34 +136,34 @@
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mar_bottom">
         <div class="blog_box">
           <div class="blog_img_box">
-            <figure><img src="images/blog_img1.png" alt="#"/>
-             <span>02 FEB 2019</span>
+            <figure><img src="PHP PIC/Fried Chicken.png" alt="#"/>
+             <span>16 OCT 2020</span>
             </figure>
           </div>
-          <h3>Spicy Barger</h3>
-          <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the </p>
+          <h3>Fried Chicken</h3>
+          <p>Our fried chicken is the bestselling food in our restaurant. Because it gives you the crispiest chicken in town. The smoothness of the meat of the chicken is very soothing and the food taste like an imported chicken. </p>
         </div>
       </div>
        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mar_bottom">
         <div class="blog_box">
           <div class="blog_img_box">
-            <figure><img src="images/blog_img2.png" alt="#"/>
-             <span>02 FEB 2019</span>
+            <figure><img src="PHP PIC/Beef Bulalo.png" alt="#"/>
+             <span>22 NOV 2020</span>
             </figure>
           </div>
-          <h3>Egg & Tosh</h3>
-          <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the </p>
+          <h3>Beef Bulalo</h3>
+          <p>Our bulalo is the best in town. Because it is 100% beef, and it gives you a calmness when you taste the soup of our bulalo. The bulalo has a marrow in it which makes the dish vey likeable.  </p>
         </div>
       </div>
        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
         <div class="blog_box">
           <div class="blog_img_box">
-            <figure><img src="images/blog_img3.png" alt="#"/>
-             <span>02 FEB 2019</span>
+            <figure><img src="PHP PIC/Lumpia Shanghai.png" alt="#"/>
+             <span>05 APR 2021</span>
             </figure>
           </div>
-          <h3>Pizza</h3>
-          <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the </p>
+          <h3>Lumpia Shanghai</h3>
+          <p>Our lumpia is the crispiest lumpia in town. Because it is cooked well, and it is well-wrapped. The wrappings have been measured well and our lumpia is very healthy because aside of pork it has a vegetable inside in it. The cheese and pork inside the lumpia mix well because we measure it correctly.  </p>
         </div>
       </div>
     </div>

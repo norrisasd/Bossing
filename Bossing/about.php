@@ -139,17 +139,45 @@
        <div class="row">
          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
              <div class="about_box">
-                 <h3>Best Food</h3>
-                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscureContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard </p>
-                 <a href="#">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                 <h3>Our Food</h3>
+                 <p>Bossing’s Restaurant serves the best and affordable Pinoy food like Adobo, Bulalo, Pancit, Sinigang, and Sisig. We also serve your favorites like Crispy Pata, Fried Chicken, Chicken Inasal, and our famous Bossing’s Siomai </p>
              </div>
          </div>
           <div class="col-xl-5 col-lg-5 col-md-10 col-sm-12 about_img_boxpdnt">
              <div class="about_img">
-                 <figure><img src="images/about-img.jpg" alt="#/"></figure>
+                 <figure><img src="PHP PIC/siomai.png" alt="#/"></figure>
              </div>
          </div>      
        </div> 
+       <br><br>
+       <div class="row">
+         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+             <div class="about_box">
+                 <h3>Restaurant and Delivery Services</h3>
+                 <p>Our restaurant opens daily from 7:30 AM – 8:30 PM. At that time, customers can visit us at N. Bacalso Avenue, Cebu City, or log on to bossingsrestaurant.com.ph to get their Bossing’s favorites online. We are also partnered with the top food delivery carriers such as GrabFood and Foodpanda. </p>
+             </div>
+         </div>
+          <div class="col-xl-5 col-lg-5 col-md-10 col-sm-12 about_img_boxpdnt">
+             <div class="about_img">
+                 <figure><img src="PHP PIC/pic2.jpg" alt="#/"></figure>
+             </div>
+         </div>      
+       </div> 
+       <br><br>
+       <div class="row">
+         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+             <div class="about_box">
+                 <h3>Quality Service and Cleanliness</h3>
+                 <p>At Bossing’s Restaurant, we provide quality service and cleanliness. From responsibly sourcing product ingredients, providing efficient and convenient services to maintaining cleanliness within our restaurants - these are essential in our daily operations and procedures.</p>
+             </div>
+         </div>
+          <div class="col-xl-5 col-lg-5 col-md-10 col-sm-12 about_img_boxpdnt">
+             <div class="about_img">
+                 <figure><img src="PHP PIC/pic3.jpg" alt="#/"></figure>
+             </div>
+         </div>      
+       </div>
+       
     </div>
 </div>
 <!-- end about -->

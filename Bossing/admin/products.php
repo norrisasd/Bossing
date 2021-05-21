@@ -17,6 +17,13 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+    </style>
     <!-- additional -->
     <link rel="stylesheet" href="../css/additional.css">
     <!-- bootstrap css -->
@@ -44,35 +51,7 @@
     <div class="wrapper">
     <!-- end loader -->
 
-     <div class="sidebar">
-            <!-- Sidebar  -->
-            <nav id="sidebar">
-
-                <div id="dismiss">
-                    <i class="fa fa-arrow-left"></i>
-                </div>
-
-                <ul class="list-unstyled components">
-
-                    <li >
-                        <a href="../index.php">Home</a>
-                    </li>
-                    <li>
-                        <a href="../about.php">About</a>
-                    </li>
-                    <li>
-                        <a href="../recipe.php">Recipe</a>
-                    </li>
-                    <li>
-                        <a href="../blog.php">Blog</a>
-                    </li>
-                    <li>
-                        <a href="../contact.php">Contact Us</a>
-                    </li>
-                </ul>
-
-            </nav>
-        </div>
+     
 
     <div id="content">
     <!-- header -->
@@ -89,16 +68,13 @@
                         <div class="right_header_info">
                             <ul>
                                 <?php
-                                echo'<li class="button_user"><a class="button" style="border:none;" href="order.php">Order</a></li>
-                                <li class="button_user"><a class="button active" style="border:none;" href="#">My Bag</a></li>
-                                <li class="button_user"><a class="button" style="border:none;" href="profile.php">Profile</a></li>
+                                echo'<li class="button_user"><a class="button" style="border:none;" href="dashboard.php">Dashboard</a></li>
+                                <li class="button_user"><a class="button" style="border:none;" href="users.php">Users</a></li>
+                                <li class="button_user"><a class="button" style="border:none;" href="orders.php">Orders</a></li>
+                                <li class="button_user"><a class="button active" style="border:none;" href="#">Products & Carriers</a></li>
+                                <li class="button_user"><a class="button" style="border:none;" href="delivery.php">Delivery</a></li>
                                 <li class="button_user"><a class="button" style="border:none;" href="../Logout.php">Logout</a></li>';
                                 ?>
-                                <li>
-                                    <button type="button" id="sidebarCollapse">
-                                        <img src="../images/menu_icon.png" alt="#">
-                                    </button>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -109,11 +85,11 @@
     <!-- end header -->
 <!-- content -->
 <div class ="d-block justify-content-center" style="padding-top: 10rem;background-image: url('../images/bg.jpg');">
-    <?php
+<?php
         if($_SESSION['checkU']){
     ?>
         <div class="alert alert-success" style="text-align:center;font-size:25px"role="alert">
-            Update Success!
+            Updated Successfully!
         </div>
     <?php
         }
@@ -122,7 +98,7 @@
         if($_SESSION['checkD']){
     ?>
         <div class="alert alert-success" style="text-align:center;font-size:25px"role="alert">
-            Delete Success!
+            Deleted Successfully!
         </div>
     <?php
         }
@@ -131,92 +107,138 @@
         if($_SESSION['check']){
     ?>
         <div class="alert alert-success" style="text-align:center;font-size:25px"role="alert">
-            Order Success!
+            Added Successfully!
         </div>
     <?php
         }
     ?>
     <div class="title" style="padding-bottom:0">
-        <h2>My Bag</h2>
+        <h2>Products</h2>
+    </div>
+    <div class="title" style="padding-bottom:0">
+        <div class="pendel">
+            <a href="#" class="activeee" id="prod" onclick="hideProducts()" style="margin:0 1rem">Products</a><a href="#" id="carr" onclick="hideCarriers()" style="margin:0 1rem">Carriers</a>
+        </div>
     </div>
     <br>
     <div class="d-block justify-content-center">
-    <table class="table" style="margin-left:auto;margin-right:auto;width:800px;">
-        <thead>
-            <tr>
-            <th scope="col">Product Name</th>
-            <th scope="col">Product Price</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Amount</th>
-            <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-             $checkDisplay=displayBag($db);
-
-            ?>
-        </tbody>
-    </table>
+        <div id="products">
+            <table class="table" style="margin-left:auto;margin-right:auto;width:800px;">
+                <thead>
+                    <tr>
+                    <th scope="col">Product ID</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Price</th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        displayAllProducts($db);
+                    ?>
+                </tbody>
+            </table>
+            <center><button type="button" class="btn btn-success" data-toggle="modal" data-target="#addProduct" style="margin-top:3rem;">Add Product</button></center>
+        </div>
+        <div id="carriers" style="display:none">
+            <table class="table" style="margin-left:auto;margin-right:auto;width:800px;">
+                <thead>
+                    <tr>
+                    <th scope="col">Delivery_ID</th>
+                    <th scope="col">Delivery Carrier</th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        displayAllCarrier($db);
+                    ?>
+                </tbody>
+            </table>
+            <center><button type="button" class="btn btn-success" data-toggle="modal" data-target="#addCarrier" style="margin-top:3rem;">Add Carrier</button></center>
+        </div>
+    
     <br>
-    <?php if($checkDisplay){
-        echo'<div class="title" style="padding-bottom:0">
-                <div style="display:inline-flex;">
-                    <h3 style="margin-left:23rem;;margin-top:0.3rem">Total</h3>
-                    <h3 style="margin-left:5rem;margin-top:0.3rem">&#8369;'.totalPrice($db).'</h3>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#placeOrderModal" style="margin-left:5rem;margin-top:0;margin-bottom:1rem;font-size: 15px;">Place Order</button>
-                </div>
-            </div>';
-    }
-    ?>
+    <!-- delete Prod -->
     <form method="post">
-        <input type="text" name="prodID" id="prodID" style="display:none">
-        <button type="submit" name="deleteProd" id="delete" style="display:none"></button>
+        <button type="submit" name="delProd" id="delProd" style="display:none"></button>
     </form>
+    <!-- delete carr -->
     <form method="post">
-        <button type="submit" name="placeOrder" id="placeOrder" style="display:none"></button>
+        <button type="submit" name="delCarr" id="delCarr" style="display:none"></button>
     </form>
     </div>
 </div>
 <!-- end content -->
 <!-- modal -->
-
-<!-- PLACE ORDER -->
-<div class="modal fade" id="placeOrderModal" tabindex="-1" aria-labelledby="editModal"  style="text-align:center" aria-hidden="true">
+<!-- edit carrier  -->
+<div class="modal fade" id="editCarrier" tabindex="-1" aria-labelledby="editModal"  style="text-align:center" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header" style="margin: 0 auto;padding:0;">
         <div class="title" style="padding-bottom:0;text-align:center">
-            <h2>Almost Done!</h2>
-            <h5>You just need to fill up this information!</h5>
+            <h2>Update Carrier</h2>
         </div>
       </div>
-    <form method="post">
       <div class="modal-body" style="margin: 0 auto;border:none;">
+        <form method="post">
         <div class="form-group" >
-          <input type="text" class="form-control" id="exampleInputEmail1" name="receName" aria-describedby="Username" placeholder="Name of the Receiver" style="border:2px #212020 solid;" required>
-        </div>
-        <div class="form-group" >
-        <style>
-        
-    </style>
-          <input type="number" class="form-control" id="contact" name="receContact" aria-describedby="Username" placeholder="Contact of the Receiver" style="border:2px #212020 solid;" required>
-        </div>
-        <div class="form-group" >
-          <input type="text" class="form-control" id="exampleInputEmail1" name="receAddress" aria-describedby="Username" placeholder="Address of the Receiver" style="border:2px #212020 solid;" required>
-        </div>
-        <div class="form-group" >
-            <select class="form-select" name="courier" required>
-                <option selected disabled value="">Delivery Courier</option>
-                <?php
-                    displayCourier($db);
-                ?>
-            </select>
+          <input type="text" class="form-control" id="cName" name="cName" aria-describedby="Username" placeholder="Name of the Carrier" style="border:2px #212020 solid;" required>
         </div>
       </div>
       <div class="modal-footer" style="margin: 0 auto;border:none;">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-dark" name="placeOrder">Confirm</button>
+        <button type="submit" class="btn btn-dark" name="editCarrier" id="editCarr">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- add carrier  -->
+<div class="modal fade" id="addCarrier" tabindex="-1" aria-labelledby="editModal"  style="text-align:center" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="margin: 0 auto;padding:0;">
+        <div class="title" style="padding-bottom:0;text-align:center">
+            <h2>Add Carrier</h2>
+        </div>
+      </div>
+      <div class="modal-body" style="margin: 0 auto;border:none;">
+        <form method="post">
+        <div class="form-group" >
+          <input type="text" class="form-control" id="exampleInputEmail1" name="cName" aria-describedby="Username" placeholder="Name of the Carrier" style="border:2px #212020 solid;" required>
+        </div>
+      </div>
+      <div class="modal-footer" style="margin: 0 auto;border:none;">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-dark" name="addCarrier">Create</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- edit product -->
+<div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editModal"  style="text-align:center" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="margin: 0 auto;padding:0;">
+        <div class="title" style="padding-bottom:0;text-align:center">
+            <h2>Update This Product!</h2>
+        </div>
+      </div>
+    <form method="post">
+      <div class="modal-body" style="margin: 0 auto;border:none;">
+        <form method="post">
+        <div class="form-group" >
+          <input type="text" class="form-control" id="pName" name="pName" aria-describedby="Username" style="border:2px #212020 solid;" required>
+        </div>
+        <div class="form-group" >
+          <input type="Number" class="form-control" id="pPrice" name="pPrice" aria-describedby="Username"  style="border:2px #212020 solid;" required>
+        </div>
+      </div>
+      <div class="modal-footer" style="margin: 0 auto;border:none;">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-dark" id="updateProduct" name="updateProduct">Update</button>
     </form>
       </div>
     </div>
@@ -224,25 +246,26 @@
 </div>
 
 <!-- EDIT -->
-<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModal"  style="text-align:center" aria-hidden="true">
+<div class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="editModal"  style="text-align:center" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header" style="margin: 0 auto;padding:0;">
         <div class="title" style="padding-bottom:0;text-align:center">
-            <h2>Update</h2>
+            <h2>Add Product</h2>
         </div>
       </div>
       <div class="modal-body" style="margin: 0 auto;border:none;">
-            <span class="modalSpan" id="modalText">Orange Juice</span>
-            <img src ="../PHP PIC/orange.png" class="rounded mx-auto d-block" id="imgSize" alt="#">
         <form method="post">
-        <input type="text" name="initial" id="initial" style="display:none">
-        <input type="text" name="pID" id="uprodID" style="display:none">
-        <span style="font-size:21px">Quantity:&nbsp<input type="number" min="0" max="100" id="modalInput" name="qty" value="0"/></span>
+        <div class="form-group" >
+          <input type="text" class="form-control" id="exampleInputEmail1" name="pName" aria-describedby="Username" placeholder="Name of the Product" style="border:2px #212020 solid;" required>
+        </div>
+        <div class="form-group" >
+          <input type="Number" class="form-control" id="exampleInputEmail1" name="pPrice" aria-describedby="Username" placeholder="Price of the Product" style="border:2px #212020 solid;" required>
+        </div>
       </div>
       <div class="modal-footer" style="margin: 0 auto;border:none;">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-dark" name="update">Update</button>
+        <button type="submit" class="btn btn-dark" name="addProduct">Create</button>
         </form>
       </div>
     </div>
@@ -250,22 +273,40 @@
 </div>
     <!-- footer -->
     <script>
-        function placeOrder(){
-            document.getElementById("placeOrder").click();
+        function hideProducts(){
+        document.getElementById("carr").classList.remove("activeee");
+        document.getElementById("prod").classList.add("activeee");
+        document.getElementById("products").style.display="block";
+        document.getElementById("carriers").style.display="none";
+        
         }
-        function deleteProd(prodID){
+        function hideCarriers(){
+            document.getElementById("carr").classList.add("activeee");
+            document.getElementById("prod").classList.remove("activeee");
+            document.getElementById("products").style.display="none";
+            document.getElementById("carriers").style.display="block";
+        }
+        function deleteProd(id){
             if(confirm("Are you sure you want to delete this product?")){
-                document.getElementById("prodID").value=prodID;
-                document.getElementById("delete").click();
+                document.getElementById("delProd").value=id;
+                document.getElementById("delProd").click();
+            }
+        }
+        function updateProd(id,name,price){
+            document.getElementById("updateProduct").value=id;
+            document.getElementById("pName").value=name;
+            document.getElementById("pPrice").value=id;
+        }
+        function updateCarr(id,name){
+            document.getElementById("editCarr").value=id;
+            document.getElementById("cName").value=name;
+        }
+        function deleteCarr(id){
+            if(confirm("Are you sure you want to delete this Carrier?")){
+                document.getElementById("delCarr").value=id;
+                document.getElementById("delCarr").click();
             }
             
-        }
-        function updateProd(prodID,totalQty,prodName){
-            document.getElementById("initial").value=totalQty;
-            document.getElementById("modalInput").value=totalQty;
-            document.getElementById("uprodID").value=prodID;
-            document.getElementById("modalText").innerHTML=prodName;
-            document.getElementById("imgSize").src="../PHP PIC/"+prodName+".png";   
         }
     </script>
     <fooetr>
