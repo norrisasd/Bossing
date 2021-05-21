@@ -175,7 +175,6 @@
             </tr>';
         return false;
         }
-        mysqli_free_result($result);
         return true;
        }
     function totalPrice($db){//get the total price
